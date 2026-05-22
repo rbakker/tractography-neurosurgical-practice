@@ -8,5 +8,5 @@ export default defineConfig({
   srcDir: "src",
   server: { port: 4321 },
   site: 'https://rbakker.github.io',
-  base: '/tractography-neurosurgical-practice/'
+  base: '/tractography-neurosurgical-practice'
 });

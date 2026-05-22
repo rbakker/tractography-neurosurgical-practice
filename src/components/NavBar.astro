@@ -1,15 +1,13 @@
 <nav class="fixed top-0 inset-x-0 z-40 bg-slate-950/80 backdrop-blur border-b border-slate-800">
-
   <!-- HEADER ROW -->
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-
     <!-- Brand -->
     <a href={`${import.meta.env.BASE_URL}/`} class="font-semibold tracking-tight text-lg">
       Connectome<span class="text-primary">Lab</span>
     </a>
 
     <!-- Hamburger button -->
-    <button 
+    <button
       id="menu-btn"
       class="md:hidden text-slate-200 hover:text-primary focus:outline-none"
       aria-label="Toggle menu"
@@ -21,32 +19,34 @@
 
     <!-- Desktop menu -->
     <div class="hidden md:flex gap-6 text-sm">
-      <a href={`${import.meta.env.BASE_URL}/project`} class="hover:text-primary">Project</a>
-      <a href={`${import.meta.env.BASE_URL}/publications`} class="hover:text-primary">Publications</a>
-      <a href={`${import.meta.env.BASE_URL}/software`} class="hover:text-primary">Software</a>
-      <a href={`${import.meta.env.BASE_URL}/contact`} class="hover:text-primary">Consortium</a>
+      <a href={`${import.meta.env.BASE_URL}/project`}       class="hover:text-primary">Project</a>
+      <a href={`${import.meta.env.BASE_URL}/publications`}  class="hover:text-primary">Publications</a>
+      <a href={`${import.meta.env.BASE_URL}/software`}      class="hover:text-primary">Software</a>
+      <a href={`${import.meta.env.BASE_URL}/contact`}       class="hover:text-primary">Consortium</a>
     </div>
-
   </div>
 
-<!-- Mobile dropdown -->
-<div 
-  id="mobile-menu"
-  class="hidden w-full flex-col items-end gap-4 px-4 pb-4 text-sm md:hidden bg-slate-950/95 border-t border-slate-800"
->
-  <a href={`${import.meta.env.BASE_URL}/project`} class="block w-fit text-right hover:text-primary">Project</a>
-  <a href={`${import.meta.env.BASE_URL}/publications`} class="block w-fit text-right hover:text-primary">Publications</a>
-  <a href={`${import.meta.env.BASE_URL}/software`} class="block w-fit text-right hover:text-primary">Software</a>
-  <a href={`${import.meta.env.BASE_URL}/contact`} class="block w-fit text-right hover:text-primary">Consortium</a>
-</div>
-
-  <script>
-    const btn = document.getElementById("menu-btn");
-    const menu = document.getElementById("mobile-menu");
-
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
-  </script>
-
+  <!-- Mobile dropdown -->
+  <div
+    id="mobile-menu"
+    class="max-h-0 overflow-hidden transition-all duration-300 md:hidden
+           bg-slate-950/95 border-slate-800"
+  >
+    <div class="flex flex-col items-end gap-4 px-4 py-4 text-sm border-t border-slate-800">
+      <a href={`${import.meta.env.BASE_URL}/project`}       class="hover:text-primary">Project</a>
+      <a href={`${import.meta.env.BASE_URL}/publications`}  class="hover:text-primary">Publications</a>
+      <a href={`${import.meta.env.BASE_URL}/software`}      class="hover:text-primary">Software</a>
+      <a href={`${import.meta.env.BASE_URL}/contact`}       class="hover:text-primary">Consortium</a>
+    </div>
+  </div>
 </nav>
+
+<script>
+  const btn  = document.getElementById("menu-btn")!;
+  const menu = document.getElementById("mobile-menu")!;
+
+  btn.addEventListener("click", () => {
+    const isOpen = menu.style.maxHeight && menu.style.maxHeight !== "0px";
+    menu.style.maxHeight = isOpen ? "0px" : menu.scrollHeight + "px";
+  });
+</script>

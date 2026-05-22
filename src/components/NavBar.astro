@@ -1,13 +1,18 @@
 <nav class="fixed top-0 inset-x-0 z-40 bg-slate-950/80 backdrop-blur border-b border-slate-800">
-  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-    <a href=`${import.meta.env.BASE_URL}` class="font-semibold tracking-tight text-lg">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+    
+    <!-- Brand -->
+    <a href={import.meta.env.BASE_URL} class="font-semibold tracking-tight text-lg">
       Connectome<span class="text-primary">Lab</span>
     </a>
-    <div class="flex gap-6 text-sm">
-      <a href={`${import.meta.env.BASE_URL}/project`} class="hover:text-primary">Project</a>
-      <a href={`${import.meta.env.BASE_URL}/publications`} class="hover:text-primary">Publications</a>
-      <a href={`${import.meta.env.BASE_URL}/software`} class="hover:text-primary">Software</a>
-      <a href={`${import.meta.env.BASE_URL}/contact`} class="hover:text-primary">Consortium</a>
+
+    <!-- Navigation links -->
+    <div class="flex flex-col md:flex-row gap-3 md:gap-6 text-sm">
+      <a href={`${import.meta.env.BASE_URL}project`} class="hover:text-primary">Project</a>
+      <a href={`${import.meta.env.BASE_URL}publications`} class="hover:text-primary">Publications</a>
+      <a href={`${import.meta.env.BASE_URL}software`} class="hover:text-primary">Software</a>
+      <a href={`${import.meta.env.BASE_URL}contact`} class="hover:text-primary">Consortium</a>
     </div>
+
   </div>
 </nav>

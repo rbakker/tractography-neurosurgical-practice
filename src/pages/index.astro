@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroLanding from "../components/HeroLanding.astro";
+import Section from "../components/Section.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+const subprojects = [
+  { title: "Subproject 1: Acquisition", slug: "subproject-1", summary: "High-quality diffusion MRI acquisition across sites." },
+  { title: "Subproject 2: Tractography", slug: "subproject-2", summary: "Robust and reproducible tractography pipelines." },
+  { title: "Subproject 3: Connectomics", slug: "subproject-3", summary: "Graph-theoretical analysis of structural networks." },
+  { title: "Subproject 4: Clinical Translation", slug: "subproject-4", summary: "Applying connectomics to neurological disorders." }
+];
+---
+
+<BaseLayout title="Connectome Project">
+  <HeroLanding />
+
+  <Section
+    id="project"
+    title="The project"
+    subtitle="Four interconnected subprojects cover acquisition, tractography, connectomics, and clinical translation."
+  >
+    <div class="grid md:grid-cols-2 gap-6">
+      {subprojects.map((p) => <ProjectCard {...p} />)}
+    </div>
+  </Section>
+</BaseLayout>

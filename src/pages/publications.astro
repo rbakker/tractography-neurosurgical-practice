@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import pubs from "../data/publications.json";
+---
+
+<BaseLayout title="Publications">
+  <Section
+    title="Publications"
+    subtitle="Peer-reviewed articles and preprints arising from the project."
+  >
+    <ul class="space-y-4">
+      {pubs.map((p) => (
+        <li class="border border-slate-800 rounded-xl p-4 bg-slate-900/40">
+          <a href={p.link} class="text-primary font-semibold hover:underline">
+            {p.title}
+          </a>
+          <div class="text-slate-300 text-sm mt-1">
+            {p.authors} · {p.journal} · {p.year}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </Section>
+</BaseLayout>

@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Dr. Jane Doe",
+    "institution": "NeuroImaging Center, University A",
+    "role": "Project PI"
+  },
+  {
+    "name": "Dr. Alex Smith",
+    "institution": "Brain Research Institute, University B",
+    "role": "Co-PI"
+  },
+  {
+    "name": "Consortium Partners",
+    "institution": "Universities and hospitals across Europe",
+    "role": "Data collection and analysis"
+  }
+]

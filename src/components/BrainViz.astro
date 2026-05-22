@@ -1,0 +1,31 @@
+<div class="relative h-80 md:h-96 rounded-3xl bg-slate-900 border border-slate-800 overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_#22d3ee33,_transparent_60%),_radial-gradient(circle_at_bottom,_#6366f133,_transparent_60%)]" />
+  <div class="relative h-full flex items-center justify-center">
+    <div class="w-64 h-64 rounded-full border border-cyan-300/40 bg-slate-900/60 backdrop-blur flex items-center justify-center">
+      <div class="w-52 h-52 rounded-full border border-indigo-400/40 relative">
+        <div class="absolute inset-4 rounded-full border border-cyan-400/40" />
+        <div class="absolute inset-0 animate-spin-slow">
+          <div class="absolute inset-0 border-t-2 border-cyan-300/70 rounded-full" />
+        </div>
+        <div class="absolute inset-0 animate-spin-slow-reverse">
+          <div class="absolute inset-6 border-l-2 border-indigo-300/70 rounded-full" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .animate-spin-slow {
+    animation: spin 18s linear infinite;
+  }
+  .animate-spin-slow-reverse {
+    animation: spin-reverse 22s linear infinite;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  @keyframes spin-reverse {
+    to { transform: rotate(-360deg); }
+  }
+</style>

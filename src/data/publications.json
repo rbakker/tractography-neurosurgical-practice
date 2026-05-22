@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Advanced diffusion MRI tractography for connectome mapping",
+    "authors": "Doe J, Smith A, et al.",
+    "year": 2024,
+    "journal": "NeuroImage",
+    "link": "https://doi.org/10.0000/example1"
+  },
+  {
+    "title": "Reproducible pipelines for large-scale structural connectivity",
+    "authors": "Roe P, Lee K, et al.",
+    "year": 2023,
+    "journal": "Human Brain Mapping",
+    "link": "https://doi.org/10.0000/example2"
+  }
+]

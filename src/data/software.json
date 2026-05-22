@@ -1,0 +1,12 @@
+[
+  {
+    "name": "TractoFlow",
+    "description": "Reproducible diffusion MRI tractography pipeline.",
+    "repo": "https://github.com/example/tractoflow"
+  },
+  {
+    "name": "ConnectomeVis",
+    "description": "Interactive visualization of structural connectivity matrices and tract bundles.",
+    "repo": "https://github.com/example/connectomevis"
+  }
+]

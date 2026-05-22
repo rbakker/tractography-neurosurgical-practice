@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import tools from "../data/software.json";
+---
+
+<BaseLayout title="Software tools">
+  <Section
+    title="Software tools"
+    subtitle="Open-source tools developed or maintained within the project."
+  >
+    <div class="grid md:grid-cols-2 gap-6">
+      {tools.map((t) => (
+        <a href={t.repo} class="block p-6 rounded-2xl border border-slate-800 bg-slate-900/40 hover:border-primary/70 transition">
+          <h3 class="text-xl font-semibold mb-2">{t.name}</h3>
+          <p class="text-slate-300 text-sm">{t.description}</p>
+          <p class="text-primary text-xs mt-3">View repository →</p>
+        </a>
+      ))}
+    </div>
+  </Section>
+</BaseLayout>

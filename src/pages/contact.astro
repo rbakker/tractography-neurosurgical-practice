@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Section from "../components/Section.astro";
+import consortium from "../data/consortium.json";
+---
+
+<BaseLayout title="Consortium & contact">
+  <Section
+    title="Consortium"
+    subtitle="A collaborative effort across multiple institutions."
+  >
+    <div class="grid md:grid-cols-2 gap-6">
+      {consortium.map((c) => (
+        <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/40">
+          <h3 class="font-semibold">{c.name}</h3>
+          <p class="text-slate-300 text-sm">{c.institution}</p>
+          <p class="text-slate-400 text-xs mt-1">{c.role}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <Section
+    title="Contact"
+    subtitle="Get in touch regarding collaboration, data access, or software."
+  >
+    <p class="text-slate-300 mb-2">
+      General contact: <a href="mailto:info@yourproject.org" class="text-primary hover:underline">info@yourproject.org</a>
+    </p>
+    <p class="text-slate-400 text-sm">
+      Replace this with your real contact details, data access procedures, or consortium agreement information.
+    </p>
+  </Section>
+</BaseLayout>

@@ -1,0 +1,23 @@
+---
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+
+const { title = "Connectome Project", description = "Scientific project on brain tractography" } = Astro.props;
+import "../styles/global.css";
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+
+  <body class="bg-slate-950 text-slate-100">
+    <NavBar />
+    <main class="min-h-screen pt-20">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Section from "../../components/Section.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+
+const subprojects = [
+  { title: "Subproject 1: Acquisition", slug: "subproject-1", summary: "Harmonized diffusion MRI protocols across centers." },
+  { title: "Subproject 2: Tractography", slug: "subproject-2", summary: "State-of-the-art fiber tracking and quality control." },
+  { title: "Subproject 3: Connectomics", slug: "subproject-3", summary: "Network construction, metrics, and modeling." },
+  { title: "Subproject 4: Clinical Translation", slug: "subproject-4", summary: "Biomarkers and clinical applications." }
+];
+---
+
+<BaseLayout title="Project overview">
+  <Section
+    title="Project overview"
+    subtitle="An integrated effort to map and understand structural connectivity in the human brain."
+  >
+    <p class="text-slate-300 mb-8">
+      The project is organized into four subprojects, each focusing on a key aspect of the pipeline—from data acquisition
+      to clinical translation. Together, they form a reproducible, open, and scalable framework for connectomics.
+    </p>
+    <div class="grid md:grid-cols-2 gap-6">
+      {subprojects.map((p) => <ProjectCard {...p} />)}
+    </div>
+  </Section>
+</BaseLayout>
